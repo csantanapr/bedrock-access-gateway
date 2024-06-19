@@ -14,7 +14,6 @@ classifiers = [
     "Programming Language :: Python :: 3",
     "Operating System :: OS Independent",
 ]
-package_dir = {"" = "api"}
 dependencies = [
     "fastapi==0.111.0",
     "pydantic==2.7.1",
@@ -30,3 +29,8 @@ dependencies = [
 [project.urls]
 Homepage = "https://github.com/csantanapr/bedrock-access-gateway"
 Issues = "https://github.com/csantanapr/bedrock-access-gateway/issues"
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "/src"
+]
