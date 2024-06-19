@@ -1,3 +1,4 @@
+import os
 from typing import Annotated
 
 from fastapi import APIRouter, Depends, HTTPException, Path
@@ -8,7 +9,7 @@ from api.schema import Models, Model
 
 router = APIRouter(
     prefix="/models",
-    dependencies=[Depends(api_key_auth)],
+    dependencies=[Depends(api_key_auth)] if os.getenv("BEDROCK_DISABLE_API_KEY_AUTH") != "true" else [],
     # responses={404: {"description": "Not found"}},
 )
 

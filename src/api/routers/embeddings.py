@@ -1,3 +1,4 @@
+import os
 from typing import Annotated
 
 from fastapi import APIRouter, Depends, Body
@@ -9,7 +10,7 @@ from api.setting import DEFAULT_EMBEDDING_MODEL
 
 router = APIRouter(
     prefix="/embeddings",
-    dependencies=[Depends(api_key_auth)],
+    dependencies=[Depends(api_key_auth)] if os.getenv("BEDROCK_DISABLE_API_KEY_AUTH") != "true" else [],
 )
 
 

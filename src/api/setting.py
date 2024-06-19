@@ -1,8 +1,10 @@
 import os
 
+os.environ["BEDROCK_DISABLE_API_KEY_AUTH"] = "true"
+
 DEFAULT_API_KEYS = "bedrock"
 
-API_ROUTE_PREFIX = "/api/v1"
+API_ROUTE_PREFIX = "/v1"
 
 TITLE = "Amazon Bedrock Proxy APIs"
 SUMMARY = "OpenAI-Compatible RESTful APIs for Amazon Bedrock"
