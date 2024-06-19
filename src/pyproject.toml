@@ -9,7 +9,6 @@ authors = [
     { name = "Carlos Santana" },
 ]
 description = "A package that handles mapping between openai chat completions and bedrock"
-readme = "README.md"
 requires-python = ">=3.11"
 classifiers = [
     "Programming Language :: Python :: 3",
