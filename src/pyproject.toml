@@ -31,4 +31,4 @@ Homepage = "https://github.com/csantanapr/bedrock-access-gateway"
 Issues = "https://github.com/csantanapr/bedrock-access-gateway/issues"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src"]
+packages = ["api"]
